@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void main()
+{
+    float mass, acceleration, force;
+
+    printf("Enter mass: ");
+    scanf("%f", &mass);
+
+    printf("Enter acceleration: ");
+    scanf("%f", &acceleration);
+
+    force = mass * acceleration;
+
+    printf("Force = %.2f N", force);
+}
