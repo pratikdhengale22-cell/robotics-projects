@@ -1,0 +1,20 @@
+include <stdio.h>
+
+         int main() {
+         int i;
+
+         printf("TRAFFIC LIGHT SIMULATION\n");
+          printf("========================\n");
+
+        for (i = 1; i <= 5; i++) {
+         printf("\nTraffic Cycle %d\n", i);
+
+         printf("RED LIGHT    - STOP\n");
+         printf("YELLOW LIGHT - WAIT\n");
+         printf("GREEN LIGHT  - GO\n");
+}
+
+printf("\nTraffic simulation completed!\n");
+
+return 0;
+}
