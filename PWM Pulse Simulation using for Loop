@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    printf("PWM Pulse Simulation\n");
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("Pulse %d: HIGH\n", i);
+        printf("Pulse %d: LOW\n", i);
+    }
+
+    return 0;
+}
