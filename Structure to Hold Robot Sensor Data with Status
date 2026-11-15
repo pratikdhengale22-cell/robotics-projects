@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+struct Sensor
+{
+    int sensorID;
+    float reading;
+    char status[10];
+};
+
+int main()
+{
+    struct Sensor s;
+
+    printf("Enter Sensor ID: ");
+    scanf("%d", &s.sensorID);
+
+    printf("Enter Sensor Reading: ");
+    scanf("%f", &s.reading);
+
+    printf("Enter Sensor Status (ON/OFF): ");
+    scanf("%9s", s.status);
+
+    printf("\n--- Sensor Details ---\n");
+    printf("Sensor ID: %d\n", s.sensorID);
+    printf("Sensor Reading: %.2f\n", s.reading);
+    printf("Sensor Status: %s\n", s.status);
+
+    return 0;
+}
