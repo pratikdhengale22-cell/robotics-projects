@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int left, right;
+
+    printf("Enter Left Sensor (0 or 1): ");
+    scanf("%d", &left);
+
+    printf("Enter Right Sensor (0 or 1): ");
+    scanf("%d", &right);
+
+    if(left == 0 && right == 0)
+    {
+        printf("Robot Moves Forward");
+    }
+    else if(left == 0 && right == 1)
+    {
+        printf("Robot Turns Left");
+    }
+    else if(left == 1 && right == 0)
+    {
+        printf("Robot Turns Right");
+    }
+    else
+    {
+        printf("Robot Stops");
+    }
+
+    return 0;
+}
