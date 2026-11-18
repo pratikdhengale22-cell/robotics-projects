@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    float reading[3];
+    int i;
+
+    for(i = 0; i < 3; i++)
+    {
+        printf("Enter sensor reading %d: ", i + 1);
+        scanf("%f", &reading[i]);
+    }
+
+    fp = fopen("sensor_log.txt", "w");
+
+    if(fp == NULL)
+    {
+        printf("File cannot be opened.");
+        return 1;
+    }
+
+    for(i = 0; i < 3; i++)
+    {
+        fprintf(fp, "Sensor %d: %.2f\n", i + 1, reading[i]);
+    }
+
+    fclose(fp);
+
+    printf("Sensor data successfully saved to file.\n");
+
+    return 0;
+}
