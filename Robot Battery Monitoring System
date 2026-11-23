@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+void checkBattery(float voltage)
+{
+    if(voltage >= 11.5)
+    {
+        printf("Battery Status: FULL");
+    }
+    else if(voltage >= 10.5)
+    {
+        printf("Battery Status: NORMAL");
+    }
+    else if(voltage >= 9.5)
+    {
+        printf("Battery Status: LOW");
+    }
+    else
+    {
+        printf("Battery Status: CRITICAL");
+        printf("\nWarning: Recharge Battery!");
+    }
+}
+
+int main()
+{
+    float voltage;
+
+    printf("Enter Robot Battery Voltage: ");
+    scanf("%f", &voltage);
+
+    checkBattery(voltage);
+
+    return 0;
+}
