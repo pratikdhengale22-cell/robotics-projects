@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int sensor[5], search;
+    int i, found = 0;
+
+    printf("Enter 5 sensor readings:\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        scanf("%d", &sensor[i]);
+    }
+
+    printf("Enter reading to search: ");
+    scanf("%d", &search);
+
+    for(i = 0; i < 5; i++)
+    {
+        if(sensor[i] == search)
+        {
+            found = 1;
+            printf("Reading found at position %d", i + 1);
+            break;
+        }
+    }
+
+    if(found == 0)
+    {
+        printf("Reading not found");
+    }
+
+    return 0;
+}
